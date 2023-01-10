@@ -13,8 +13,11 @@ def find_sum(numbers: list[float], target: float, partial=[]):
 
 if __name__ == "__main__":
 
-    l = "5 5 5 5 5 25 50 75 100".split()
-    l = [float(i) for i in l]
+    nums = input("input list of numbers (space separated): ")
+    target = float(input("Input target num: "))
+
+    l = nums.split()
+    l = sorted([float(i) for i in l])
     print(l)
 
-    find_sum(l, 75)
+    find_sum(l, target)
